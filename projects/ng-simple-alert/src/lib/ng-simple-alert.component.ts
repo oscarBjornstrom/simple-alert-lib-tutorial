@@ -6,7 +6,7 @@ import { AlertMessage, NgSimpleAlertService } from './ng-simple-alert.service';
   selector: 'lib-ng-simple-alert',
   template: `
     <div class="alert" *ngIf="alertMessage$ | async as alertMessage" [ngStyle]="{ background: alertMessage.color }">
-      <strong>{{ alertMessage.prefix }}!</strong> {{ alertMessage.message }}
+      <strong>{{ alertMessage.prefix }}!!</strong> {{ alertMessage.message }}
       <span class="closebtn" (click)="closeAlert()">&times;</span>
     </div>
   `,
