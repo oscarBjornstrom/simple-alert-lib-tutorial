@@ -4,14 +4,18 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "npm run build:lib && npm run build:showcase",
+    "build:lib": "npm run copy:readme && ng build ng-simple-alert",
+    "build:showcase": "ng build ng-alert-showcase --base-href='https://tinnitus95.github.io/simple-alert-lib-tutorial/'",
     "test": "ng test",
     "test:lib-coverage": "ng test ng-simple-alert --code-coverage --watch=false",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "format:check": "prettier --list-different 'projects/**/*.ts",
     "format:write": "prettier --write 'projects/**/*.ts",
-    "report-coverage:lib": "cat ./coverage/ng-simple-alert/lcov.info | codecov"
+    "report-coverage:lib": "cat ./coverage/ng-simple-alert/lcov.info | codecov",
+    "publish:showcase": "npx angular-cli-ghpages -dir=./dist/ng-alert-showcase",
+    "copy:readme": "copyfiles ./README.md ./dist/ng-simple-alert"
   },
   "private": true,
   "dependencies": {
@@ -33,11 +37,15 @@
     "@angular/cli": "~8.3.4",
     "@angular/compiler-cli": "~8.2.5",
     "@angular/language-service": "~8.2.5",
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
+    "@commitlint/prompt": "^8.2.0",
     "@types/jasmine": "~3.3.8",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~8.9.4",
     "codecov": "^3.6.1",
     "codelyzer": "^5.0.0",
+    "copyfiles": "^2.1.1",
     "husky": "^3.1.0",
     "jasmine-core": "~3.4.0",
     "jasmine-spec-reporter": "~4.2.1",
@@ -57,13 +65,19 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "lint-staged": {
     "projects/**/*.ts": [
       "prettier --write",
       "git add"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
     ]
   }
 }
