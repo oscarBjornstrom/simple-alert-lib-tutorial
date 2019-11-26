@@ -28,12 +28,12 @@ jobs:
         - npm run report-coverage:lib
     - stage: build & publish showcase
       script:
-        - npm run build:demo
+        - npm run build:showcase
       deploy:
         provider: pages
         skip_cleanup: true
         github_token: $GH_TOKEN
-        local_dir: dist/ng-simple-alert-showcase
+        local_dir: dist/ng-alert-showcase
       if: branch = master
     - stage: build & publish lib
       script:
