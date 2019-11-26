@@ -1,6 +1,6 @@
 {
   "name": "ng-simple-alert",
-  "version": "0.0.0",
+  "version": "0.0.0-development",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -15,7 +15,11 @@
     "format:write": "prettier --write 'projects/**/*.ts",
     "report-coverage:lib": "cat ./coverage/ng-simple-alert/lcov.info | codecov",
     "publish:showcase": "npx angular-cli-ghpages -dir=./dist/ng-alert-showcase",
-    "copy:readme": "copyfiles ./README.md ./dist/ng-simple-alert"
+    "copy:readme": "copyfiles ./README.md ./dist/ng-simple-alert",
+    "semantic-release": "semantic-release",
+    "adjust-version": "npm-run-all adjust-version:*",
+    "adjust-version:lib": "rjp projects/ng-simple-alert/package.json version $VERSION",
+    "adjust-version:main": "rjp package.json version $VERSION"
   },
   "private": true,
   "dependencies": {
@@ -40,6 +44,7 @@
     "@commitlint/cli": "^8.2.0",
     "@commitlint/config-conventional": "^8.2.0",
     "@commitlint/prompt": "^8.2.0",
+    "@semantic-release/exec": "^3.3.8",
     "@types/jasmine": "~3.3.8",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~8.9.4",
@@ -58,6 +63,7 @@
     "ng-packagr": "^5.4.0",
     "prettier": "^1.19.1",
     "protractor": "~5.4.0",
+    "semantic-release": "^15.13.31",
     "ts-node": "~7.0.0",
     "tsickle": "^0.37.0",
     "tslint": "~5.15.0",
@@ -79,5 +85,9 @@
     "extends": [
       "@commitlint/config-conventional"
     ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Tinnitus95/simple-alert-lib-tutorial.git"
   }
 }
