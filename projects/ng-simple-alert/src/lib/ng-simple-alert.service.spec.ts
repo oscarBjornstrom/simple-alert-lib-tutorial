@@ -16,7 +16,7 @@ describe('NgSimpleAlertService', () => {
 
   it('should stream a succes message', () => {
     const message = 'Vinicius Junior - next worlds best footballer';
-    const expectedMessage = { prefix: 'Success', message, coler: 'green' };
+    const expectedMessage = { prefix: 'Successss', message, coler: 'green' };
 
     sut.createSuccessAlert(message);
 

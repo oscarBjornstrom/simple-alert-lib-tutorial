@@ -16,7 +16,7 @@ export class NgSimpleAlertService {
   public alertMessage$ = new Subject<AlertMessage>();
 
   public createSuccessAlert(message: string): void {
-    this.alertMessage$.next(this.createAlertMessage('Success', message, 'green'));
+    this.alertMessage$.next(this.createAlertMessage('Successss', message, 'green'));
   }
 
   public createDangerAlert(message: string): void {
