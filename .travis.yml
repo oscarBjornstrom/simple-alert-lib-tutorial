@@ -38,6 +38,6 @@ jobs:
     - stage: build & publish lib
       script:
         - npm run build:lib
-        - npm whoami
+        - npm run whoami
         - npm run publish:lib
       if: branch = master
