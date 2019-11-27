@@ -30,8 +30,6 @@ jobs:
       script:
         - npm run test:lib-coverage
         - npm run report-coverage:lib
-    - #
-      script:
         - npm run cypress:ci
     - stage: build & publish showcase
       script:
