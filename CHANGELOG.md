@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/Tinnitus95/simple-alert-lib-tutorial/compare/v1.0.1...v1.1.0) (2019-11-27)
+
+
+### Features
+
+* **npm:** rename npm package ([0233097](https://github.com/Tinnitus95/simple-alert-lib-tutorial/commit/0233097352a2e8fba40493cc30a467c3ff4ffefb))
+
 ## [1.0.1](https://github.com/Tinnitus95/simple-alert-lib-tutorial/compare/v1.0.0...v1.0.1) (2019-11-27)
 
 
