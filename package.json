@@ -10,7 +10,7 @@
     "test": "ng test",
     "test:lib-coverage": "ng test ng-simple-alert --code-coverage --watch=false",
     "lint": "ng lint",
-    "e2e": "ng e2e",
+    "e2e": "cypress open",
     "format:check": "prettier --list-different 'projects/**/*.ts",
     "format:write": "prettier --write 'projects/**/*.ts",
     "report-coverage:lib": "cat ./coverage/ng-simple-alert/lcov.info | codecov",
@@ -21,7 +21,10 @@
     "adjust-version": "npm-run-all adjust-version:*",
     "adjust-version:lib": "rjp projects/ng-simple-alert/package.json version $VERSION",
     "adjust-version:main": "rjp package.json version $VERSION",
-    "whoami": "npm whoami"
+    "cypress:open": "concurrently \"ng serve --port 8000\" \"cypress open\"",
+    "cypress:ci": "ng build --prod ng-alert-showcase && run-p --race start:ci cypress:run ",
+    "start:ci": "http-server ./dist/ng-alert-showcase -a localhost -p 8000 -c-1",
+    "cypress:run": "cypress run"
   },
   "private": true,
   "dependencies": {
@@ -54,7 +57,10 @@
     "@types/node": "~8.9.4",
     "codecov": "^3.6.1",
     "codelyzer": "^5.0.0",
+    "concurrently": "^5.0.0",
     "copyfiles": "^2.1.1",
+    "cypress": "^3.6.1",
+    "http-server": "^0.12.0",
     "husky": "^3.1.0",
     "jasmine-core": "~3.4.0",
     "jasmine-spec-reporter": "~4.2.1",

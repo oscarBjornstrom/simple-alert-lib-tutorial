@@ -22,10 +22,13 @@ jobs:
     - stage: lint
       script:
         - ng lint
-    - stage: test
+    - stage: Unit test
       script:
         - npm run test:lib-coverage
         - npm run report-coverage:lib
+    - stage: E2E test
+      script:
+        - npm run cypress:ci
     - stage: build & publish showcase
       script:
         - npm run build:showcase
