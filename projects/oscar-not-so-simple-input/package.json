@@ -1,6 +1,6 @@
 {
   "name": "oscar-not-so-simple-input",
-  "version": "0.0.1",
+  "version": "1.2.0",
   "peerDependencies": {
     "@angular/common": "^8.2.14",
     "@angular/core": "^8.2.14"

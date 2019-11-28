@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/Tinnitus95/simple-alert-lib-tutorial/compare/v1.1.0...v1.2.0) (2019-11-28)
+
+
+### Features
+
+* **input:** added a new input component and changed test runner ([5120482](https://github.com/Tinnitus95/simple-alert-lib-tutorial/commit/5120482fc0435dbbca3b72ccece0cd168d1f899f))
+
 # [1.1.0](https://github.com/Tinnitus95/simple-alert-lib-tutorial/compare/v1.0.1...v1.1.0) (2019-11-27)
 
 
