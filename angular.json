@@ -120,7 +120,7 @@
           "options": {
             "main": "projects/ng-alert-showcase/src/test.ts",
             "polyfills": "projects/ng-alert-showcase/src/polyfills.ts",
-            "tsConfig": "projects/ng-alert-showcase/tsconfig.spec.json"
+            "tsConfig": "projects/ng-alert-showcase/tsconfig.spec.json",
             "assets": [
               "projects/ng-alert-showcase/src/favicon.ico",
               "projects/ng-alert-showcase/src/assets"
