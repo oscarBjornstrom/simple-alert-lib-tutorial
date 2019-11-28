@@ -4,3 +4,14 @@
 <button class="danger" (click)="createDangerMessage()">Create danger alert</button>
 <button class="warning" (click)="createWarningMessage()">Create warning alert</button>
 <button class="info" (click)="createInfoMessage()">Create info alert</button>
+
+
+<div>
+  <form action="">
+    <lib-oscar-not-so-simple-input
+      [inputFormControl]="appFormControl"
+      [inputId]="'input1'"
+      [label]="'Name'"
+    ></lib-oscar-not-so-simple-input>
+  </form>
+</div>

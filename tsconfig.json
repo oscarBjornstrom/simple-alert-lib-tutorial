@@ -1,6 +1,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "esModuleInterop": true,
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
@@ -24,6 +25,12 @@
       ],
       "ng-simple-alert/*": [
         "dist/ng-simple-alert/*"
+      ],
+      "oscar-not-so-simple-input": [
+        "dist/oscar-not-so-simple-input"
+      ],
+      "oscar-not-so-simple-input/*": [
+        "dist/oscar-not-so-simple-input/*"
       ]
     }
   },

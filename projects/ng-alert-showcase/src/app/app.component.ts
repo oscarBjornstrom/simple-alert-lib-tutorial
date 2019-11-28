@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NgSimpleAlertService } from '../../../ng-simple-alert/src/lib/ng-simple-alert.service';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,10 @@ import { NgSimpleAlertService } from '../../../ng-simple-alert/src/lib/ng-simple
 })
 export class AppComponent {
   title = 'ng-alert-showcase';
+  appFormControl = new FormControl('');
+  testForm = new FormGroup({
+    name: new FormControl('')
+  });
 
   constructor(private alertService: NgSimpleAlertService) {}
 
