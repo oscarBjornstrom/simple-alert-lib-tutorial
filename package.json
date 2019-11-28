@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "npm run build:lib && npm run build:showcase",
-    "build:alert": "npm run copy:readme && ng build ng-simple-alert && ng build oscar-not-so-simple-input",
+    "build:lib": "npm run copy:readme && ng build ng-simple-alert && ng build oscar-not-so-simple-input",
     "build:showcase": "ng build ng-alert-showcase --base-href='https://tinnitus95.github.io/simple-alert-lib-tutorial/'",
     "test": "npm run test:alert && npm run test:input && npm run test:showcase",
     "test:lib-coverage": "npm run test:alert -- --coverage --watch=false && npm run test:input -- --coverage --watch=false",
