@@ -16,13 +16,6 @@
             "project": "projects/ng-simple-alert/ng-package.json"
           }
         },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "projects/ng-simple-alert/src/test.ts",
-            "tsConfig": "projects/ng-simple-alert/tsconfig.spec.json"
-          }
-        },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
@@ -115,22 +108,6 @@
             "browserTarget": "ng-alert-showcase:build"
           }
         },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "projects/ng-alert-showcase/src/test.ts",
-            "polyfills": "projects/ng-alert-showcase/src/polyfills.ts",
-            "tsConfig": "projects/ng-alert-showcase/tsconfig.spec.json",
-            "assets": [
-              "projects/ng-alert-showcase/src/favicon.ico",
-              "projects/ng-alert-showcase/src/assets"
-            ],
-            "styles": [
-              "projects/ng-alert-showcase/src/styles.scss"
-            ],
-            "scripts": []
-          }
-        },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
@@ -169,13 +146,6 @@
           "options": {
             "tsConfig": "projects/oscar-not-so-simple-input/tsconfig.lib.json",
             "project": "projects/oscar-not-so-simple-input/ng-package.json"
-          }
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "projects/oscar-not-so-simple-input/src/test.ts",
-            "tsConfig": "projects/oscar-not-so-simple-input/tsconfig.spec.json"
           }
         },
         "lint": {
