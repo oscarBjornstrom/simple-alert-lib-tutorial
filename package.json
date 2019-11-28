@@ -8,7 +8,7 @@
     "build:alert": "npm run copy:readme && ng build ng-simple-alert && ng build oscar-not-so-simple-input",
     "build:showcase": "ng build ng-alert-showcase --base-href='https://tinnitus95.github.io/simple-alert-lib-tutorial/'",
     "test": "npm run test:alert && npm run test:input && npm run test:showcase",
-    "test:lib-coverage": "ng test ng-simple-alert --code-coverage --watch=false && ng test oscar-not-so-simple-input --code-coverage --watch=false",
+    "test:lib-coverage": "npm run test:alert -- --coverage --watch=false && npm run test:input -- --coverage --watch=false",
     "lint": "ng lint",
     "e2e": "cypress open",
     "format:check": "prettier --list-different 'projects/**/*.ts",

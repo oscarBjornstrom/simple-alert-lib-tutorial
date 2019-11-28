@@ -1,5 +1,3 @@
-import { TestBed } from '@angular/core/testing';
-
 import { NgSimpleAlertService } from './ng-simple-alert.service';
 import { TestScheduler } from 'rxjs/testing';
 
